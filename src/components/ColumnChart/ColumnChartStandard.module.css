@@ -1,0 +1,45 @@
+.chartStandardInner {
+  position: relative;
+  padding-bottom: 27px;
+  padding-top: 10px;
+}
+
+.chartStandardTitle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  overflow: auto;
+  max-height: 26px;
+  padding: 4px;
+}
+
+.chartStandardBlock {
+  width: 80px;
+  background-color: var(--main-neutral--100);
+  background-image: url("../../assets/lines.svg");
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chartStandardBlock.blue {
+  background-color: var(--accent-client-color--100);
+}
+
+.chartStandardBlock.pink {
+  background-color: var(--accent-database-color--100);
+}
+
+.chartStandardBlock.purple {
+  background-color: var(--accent-server-color--100);
+}
+
+.chartStandardEmblem {
+  background-color: var(--main-light--100);
+  padding: 4px 12px;
+  border-radius: 5px;
+}

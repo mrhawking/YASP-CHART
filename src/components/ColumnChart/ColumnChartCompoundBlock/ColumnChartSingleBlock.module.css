@@ -1,0 +1,17 @@
+.chartSingleBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-neutral--100);
+  color: var(--main-light--100);
+}
+
+.chartSingleBlock.pink {
+  background-color: var(--accent-database-color--100);
+}
+.chartSingleBlock.purple {
+  background-color: var(--accent-server-color--100);
+}
+.chartSingleBlock.blue {
+  background-color: var(--accent-client-color--100);
+}
