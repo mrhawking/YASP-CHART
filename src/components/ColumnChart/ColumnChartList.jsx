@@ -8,19 +8,19 @@ import { ChartsContext } from '../../store/charts-context';
 
 
 const ColumnChartList = () => {
-  const {chartsData} = useContext(ChartsContext);
+  const {chartsData, norm} = useContext(ChartsContext);
 
   return (
     <ul style={{ display: 'flex', gap: '60px', maxWidth: '500px', alignItems: 'flex-end', justifyContent: 'space-between' }}>
       {chartsData.map((item) => {
         return (
-          <ColumnChartItem key={Math.random()}>
+          <ColumnChartItem key={item.name}>
             <ColumnChartCaption>{item.name}</ColumnChartCaption>
             <ColumnChartCompoundBlock chartData={item.data}/>
           </ColumnChartItem>
         );
       })}
-      <ColumnChartStandard color='blue'/>
+      {norm ? <ColumnChartStandard color='blue'/> : <span>Данных нет</span>}
     </ul>
   )
 }

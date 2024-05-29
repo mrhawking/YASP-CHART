@@ -1,0 +1,5 @@
+export const SCREEN_WIDTH = {
+  SCREEN_SM: 350,
+  SCREEN_MD: 600,
+  SCREEN_LG: 1000
+}

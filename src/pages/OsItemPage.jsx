@@ -22,7 +22,6 @@ const OsItemPage = () => {
 
   return (
     <main className="container">
-      hello
       {chartsData && <ColumnChart />}
     </main>
   )

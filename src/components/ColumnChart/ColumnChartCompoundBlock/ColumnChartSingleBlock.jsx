@@ -4,8 +4,8 @@ const ColumnChartSingleBlock = ({ children, className, customStyles, color, heig
   return (
     <div
       className={`${classes.chartSingleBlock} ${className || ''} ${classes[color] || ''}`}
-      style={{...customStyles, height: height}}>
-      {children}
+      style={{ ...customStyles, height: height + 'px' }}>
+      <span className={`${height < 16 && 'hidden' }`}>{children}</span>
     </div>
   )
 }

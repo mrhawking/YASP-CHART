@@ -24,7 +24,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.2;
   color: var(--main-neutral--100);
   background-color: var(--main-light-100);
@@ -138,8 +138,12 @@ legend {
   overflow: hidden;
 }
 
-.hidden {
+.none {
   display: none;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .align-center {

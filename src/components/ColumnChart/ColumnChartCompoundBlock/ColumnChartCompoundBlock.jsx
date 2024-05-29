@@ -1,24 +1,28 @@
 import ColumnChartSingleBlock from './ColumnChartSingleBlock';
 import classes from './ColumnChartCompoundBlock.module.css';
 import { COLOR_LIST } from '../../../utils/color-list';
-import { countHeight } from '../../../utils/util';
+import { countHeight, formatNumber } from '../../../utils/util';
 import { useContext } from 'react';
 import { ChartsContext } from '../../../store/charts-context';
 
 const ColumnChartCompoundBlock = ({ className, chartData }) => {
   const { max, maxHeight } = useContext(ChartsContext);
+  
+  const frontHeight = countHeight(chartData.front, max, maxHeight) || 0;
+  const backHeight = countHeight(chartData.back, max, maxHeight) || 0;
+  const dbHeight = countHeight(chartData.db, max, maxHeight) || 0;
 
   return (
     <div className={`${classes.chartCompoundBlock} ${className || ''}`}>
       <ColumnChartSingleBlock
-        height={`${countHeight(chartData.front, max, maxHeight)}px`}
-        color={COLOR_LIST.FRONT}>{chartData.front}</ColumnChartSingleBlock >
+        height={frontHeight}
+        color={COLOR_LIST.FRONT}>{formatNumber(chartData.front)}</ColumnChartSingleBlock >
       <ColumnChartSingleBlock
-        height={`${countHeight(chartData.back, max, maxHeight)}px`}
-        color={COLOR_LIST.BACK}>{chartData.back}</ColumnChartSingleBlock >
+        height={backHeight}
+        color={COLOR_LIST.BACK}>{formatNumber(chartData.back)}</ColumnChartSingleBlock >
       <ColumnChartSingleBlock
-        height={`${countHeight(chartData.db, max, maxHeight)}px`}
-        color={COLOR_LIST.DB}>{chartData.db}</ColumnChartSingleBlock>
+        height={dbHeight}
+        color={COLOR_LIST.DB}>{formatNumber(chartData.db)}</ColumnChartSingleBlock>
     </div>
   )
 }

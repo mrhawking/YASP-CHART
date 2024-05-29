@@ -15,3 +15,14 @@ export const countSumInObj = (obj) => {
   }
   return sum
 };
+
+export const formatNumber = (num) => {
+  const options = {
+    notation: 'compact',
+    compactDisplay: 'short',
+  };
+
+  const formatter = new Intl.NumberFormat('ru-RU', options);
+
+  return formatter.format(num);
+}
