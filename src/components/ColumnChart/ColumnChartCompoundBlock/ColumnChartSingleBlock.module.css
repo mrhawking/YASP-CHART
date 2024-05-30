@@ -8,11 +8,13 @@
 }
 
 .chartSingleBlock.pink {
-  background-color: var(--accent-database-color--100);
+  background-color: var(--accent-pink-color--100);
 }
+
 .chartSingleBlock.purple {
-  background-color: var(--accent-server-color--100);
+  background-color: var(--accent-purple-color--100);
 }
+
 .chartSingleBlock.blue {
-  background-color: var(--accent-client-color--100);
+  background-color: var(--accent-blue-color--100);
 }

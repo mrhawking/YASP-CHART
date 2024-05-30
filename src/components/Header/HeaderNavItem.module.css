@@ -1,0 +1,24 @@
+.mainNavItem {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.mainNavItem a {
+  padding: 10px;
+  color: var(--main-light--100);
+  font-weight: bold;
+  background-color: var(--main-neutral--100);
+}
+
+.mainNavItem:hover {
+  opacity: 0.8;
+  transition: opacity ease-out 0.4s;
+}
+
+.mainNavItem:active {
+  opacity: 1;
+}
+
+a.active {
+  background-color: var(--accent-blue-color--100);
+}

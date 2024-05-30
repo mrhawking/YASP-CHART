@@ -1,6 +1,3 @@
-/* #arrowFirst path{
-  fill: purple;
-  transform: translateX(50px);
-
-
-} */
+.arrowWrapper {
+  position: relative;
+}

@@ -1,0 +1,27 @@
+.columnChartSection {
+  max-width: 540px;
+}
+
+.columnChartTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.columnChartInner {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.columnChartContent {
+  padding: 30px 24px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

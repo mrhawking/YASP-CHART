@@ -5,9 +5,12 @@ const ColumnChartSingleBlock = ({ children, className, customStyles, color, heig
     <div
       className={`${classes.chartSingleBlock} ${className || ''} ${classes[color] || ''}`}
       style={{ ...customStyles, height: height + 'px' }}>
-      <span className={`${height < 16 && 'hidden' }`}>{children}</span>
+      <span
+        className={`${height < 16 && 'hidden'}`}>
+        {children}
+      </span>
     </div>
-  )
+  );
 }
 
-export default ColumnChartSingleBlock
+export default ColumnChartSingleBlock;

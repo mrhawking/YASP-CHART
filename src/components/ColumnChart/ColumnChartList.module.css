@@ -1,0 +1,12 @@
+.chartList {
+   display: flex;
+   gap: 60px;
+   max-width: 500px;
+   align-items: flex-end;
+   justify-content: space-between;
+
+   @media (max-width: 600px) {
+      max-width: 350px;
+      gap: 10px;
+   }
+}

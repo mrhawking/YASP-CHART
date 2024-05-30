@@ -2,16 +2,16 @@ import { useContext } from 'react';
 import ColumnChartItem from '../ColumnChart/ColumnChartItem';
 import ColumnChartCaption from './ColumnChartCaption';
 import ColumnChartCompoundBlock from './ColumnChartCompoundBlock/ColumnChartCompoundBlock';
-import classes from './ColumnChartList.module.css';
 import ColumnChartStandard from './ColumnChartStandard';
 import { ChartsContext } from '../../store/charts-context';
+import classes from './ColumnChartList.module.css';
 
 
 const ColumnChartList = () => {
   const {chartsData, norm} = useContext(ChartsContext);
 
   return (
-    <ul style={{ display: 'flex', gap: '60px', maxWidth: '500px', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+    <ul className={classes.chartList}>
       {chartsData.map((item) => {
         return (
           <ColumnChartItem key={item.name}>
@@ -22,7 +22,7 @@ const ColumnChartList = () => {
       })}
       {norm ? <ColumnChartStandard color='blue'/> : <span>Данных нет</span>}
     </ul>
-  )
+  );
 }
 
-export default ColumnChartList
+export default ColumnChartList;

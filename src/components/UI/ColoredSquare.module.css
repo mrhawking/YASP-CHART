@@ -1,0 +1,18 @@
+.square {
+  width: 16px;
+  height: 16px;
+  background-color: var(--main-neutral--100);
+  border-radius: 3px;
+}
+
+.square.pink {
+  background-color: var(--accent-pink-color--100);
+}
+
+.square.purple {
+  background-color: var(--accent-purple-color--100);
+}
+
+.square.blue {
+  background-color: var(--accent-blue-color--100);
+}

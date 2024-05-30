@@ -1,0 +1,6 @@
+.columnChartWrapper {
+  position: relative;
+  padding-bottom: 27px;
+  background-color: var(--main-light--100);
+  padding-top: 10px;
+}

@@ -1,0 +1,23 @@
+.arrowsWrapper {
+  height: 62px;
+}
+
+.arrowsContainer {
+  display: flex;
+  gap: 18px;
+  padding-left: 39px;
+}
+
+.emblemPosition {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.emblemLeft {
+  left: 45%;
+}
+
+.emblemRight {
+  left: 55%;
+}

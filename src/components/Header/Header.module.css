@@ -1,0 +1,12 @@
+.mainHeader {
+  margin-bottom: 20px;
+  padding: 20px 0;
+  background-color: var(--main-neutral--20);
+}
+
+.mainNavList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

@@ -4,10 +4,11 @@ import OsListPage from "./pages/OsListPage";
 import OsItemPage from "./pages/OsItemPage";
 import RootLayout from "./pages/RootLayout";
 import ChartsContextProvider from "./store/charts-context";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
-    path: '/', element: <RootLayout />, children: [
+    path: '/', errorElement: <ErrorPage/>, element: <RootLayout />, children: [
       { index: true, element: <HomePage /> },
       {
         path: 'oslist', children: [
