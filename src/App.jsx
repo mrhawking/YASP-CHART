@@ -1,34 +1,12 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import OsListPage from "./pages/OsListPage";
-import OsItemPage from "./pages/OsItemPage";
-import RootLayout from "./pages/RootLayout";
+import { RouterProvider } from "react-router-dom";
 import ChartsContextProvider from "./store/charts-context";
-import ErrorPage from "./pages/ErrorPage";
-
-const router = createBrowserRouter([
-  {
-    path: '/', errorElement: <ErrorPage/>, element: <RootLayout />, children: [
-      { index: true, element: <HomePage /> },
-      {
-        path: 'oslist', children: [
-          { index: true, element: <OsListPage /> },
-          { path: ':osId', element: <OsItemPage /> }
-        ]
-      }
-    ]
-  },
-
-]);
+import { router } from "./router";
 
 function App() {
 
   return (
     <ChartsContextProvider>
-      <RouterProvider router={router} >
-        {/* 1  В файле эмбллемы убрать позиционку и перенести в классы пр ииспользровании элемента 
-      2 Поменять названия уветов на pink и т д*/}
-      </RouterProvider>
+      <RouterProvider router={router} />
     </ChartsContextProvider>
   )
 }

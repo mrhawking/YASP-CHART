@@ -1,10 +1,12 @@
+import { ROUTES } from "./routes";
+
 export const NAV_LIST = [
   {
     name: 'Главная',
-    path: '/'
+    path: ROUTES.MAIN
   },
   {
     name: 'Список',
-    path: '/oslist'
+    path: ROUTES.OSLIST
   }
 ]
